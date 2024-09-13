@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <!-- Place Name -->
+    <TextView
+        android:id="@+id/placeNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Place Name"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Restaurant" />
+
+    <!-- Place Address -->
+    <TextView
+        android:id="@+id/placeAddressTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Place Address"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/placeNameTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="123 Main St, City, Country" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
