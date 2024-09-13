@@ -106,10 +106,8 @@ class MainActivity : AppCompatActivity() {
 
                 val responseCode = urlConnection.responseCode
 
-
                 if (responseCode == HttpURLConnection.HTTP_OK) {
                     val response = urlConnection.inputStream.bufferedReader().readText()
-
 
                     val jsonResponse = JSONObject(response).getJSONArray("elements")
                     val placesList = ArrayList<Place>()
@@ -133,8 +131,12 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     runOnUiThread {
-                        val adapter = PlaceAdapter(this@MainActivity, placesList)
-                        placesListView.adapter = adapter
+                        if (placesList.isEmpty()) {
+                            Toast.makeText(this@MainActivity, "No locations found", Toast.LENGTH_SHORT).show()
+                        } else {
+                            val adapter = PlaceAdapter(this@MainActivity, placesList)
+                            placesListView.adapter = adapter
+                        }
                     }
                 } else {
                     runOnUiThread {
@@ -152,6 +154,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
 
 
 
