@@ -101,7 +101,7 @@ class MainActivity : AppCompatActivity() {
             try {
                 val urlConnection = URL(urlString).openConnection() as HttpURLConnection
                 urlConnection.requestMethod = "GET"
-                urlConnection.setRequestProperty("User-Agent", "NearbyPlacesLocatorApp/1.0 (your-email@example.com)")
+                urlConnection.setRequestProperty("UniStudent", "UniProject/v1 (unistudent@gmail.com)")
                 urlConnection.connect()
 
                 val responseCode = urlConnection.responseCode
