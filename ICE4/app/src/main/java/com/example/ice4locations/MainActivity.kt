@@ -101,7 +101,7 @@ class MainActivity : AppCompatActivity() {
             try {
                 val urlConnection = URL(urlString).openConnection() as HttpURLConnection
                 urlConnection.requestMethod = "GET"
-                urlConnection.setRequestProperty("VcStudent", "VcProject/v1 (vcstudent@gmail.com)")
+                urlConnection.setRequestProperty("wfssd", "wfssd/v1.1 (wfssd@gmail.com)")
                 urlConnection.connect()
 
                 val responseCode = urlConnection.responseCode
